@@ -1,0 +1,45 @@
+zuul:
+  routes:
+    echo:
+      path: /employee/**
+      serviceId: employee
+      stripPrefix: true
+#    employee:
+#      path: /employee/**
+#      url: http://18.140.59.134:8080
+#      stripPrefix: true
+    user:
+      path: /user/**
+      url: http://10.0.2.239:8083
+      stripPrefix: true
+    salary:
+      path: /salary/**
+      url: http://10.0.2.239:8082
+      stripPrefix: true
+    leave:
+      path: /leave/**
+      url: http://10.0.2.239:8081
+      stripPrefix: true
+    session:
+      path: /session/**
+      url: http://10.0.2.239:8084
+      stripPrefix: true
+spring:
+  application:
+    name: apiGateway
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://18.139.165.126:8761/eureka/
+  instance:
+    preferIpAddress: true
+server:
+  port: 9090
+ribbon:
+  eureka:
+    enabled: false
+employee:
+  ribbon:
+    listOfServers: http://3.1.218.144:8080,http://52.221.203.61:8080
+
+

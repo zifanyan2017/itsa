@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://itsa-others.clswrku7mhdk.ap-southeast-1.rds.amazonaws.com/itsa
+    username: admin
+    password: zx55774463
+    tomcat:
+      initial-size: 2
+      max-wait: 20000
+      max-active: 2
+      max-idle: 2
+      min-idle: 1
+      default-auto-commit: true
+server:
+  tomcat:
+    max-threads: 2
+
+
+
+
+
+
+
